@@ -92,7 +92,7 @@ namespace SimpleCalculator
             decimal number = Convert.ToDecimal(textbox.Text); // create & assign number variable to textbox entry
             if (number <= min || number >= max) // check if textbox entry is between min and max values (exclusive)
             {
-                MessageBox.Show(name + " must be between " + min + " and " + max + ".", "Entry Error"); // display range error message
+                MessageBox.Show(name + " must be between " + min + " and " + max + " (exclusive).", "Entry Error"); // display range error message
                 textbox.Focus(); // assign focus to textbox
                 return false; // return false to calling method
             }
