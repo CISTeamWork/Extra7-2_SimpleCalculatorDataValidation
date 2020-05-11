@@ -53,12 +53,12 @@ namespace SimpleCalculator
                 && IsDecimal(txtOperand1, "Operand 1") // check if operand 1 is decimal
                 && IsWithinRange(txtOperand1, "Operand 1", 0, 1000000) // check if operand 1 is between 0 & 1000000 exclusive
 
+                && IsPresent(txtOperator, "Operator") // check if operator is empty
+                && IsOperator(txtOperator, "Operator") // check if operator is valid
+
                 && IsPresent(txtOperand2, "Operand 2") // check if operand 2 is empty
                 && IsDecimal(txtOperand2, "Operand 2") // check if operand 2 is decimal
-                && IsWithinRange(txtOperand2, "Operand 2", 0, 1000000) // check if operand 2 is between 0 & 1000000 exclusive
-
-                && IsPresent(txtOperator, "Operator") // check if operator is empty
-                && IsOperator(txtOperator, "Operator"); // check if operator is valid
+                && IsWithinRange(txtOperand2, "Operand 2", 0, 1000000); // check if operand 2 is between 0 & 1000000 exclusive
         }
 
         public bool IsPresent(TextBox textbox, string name)
